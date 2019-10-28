@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+	      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	      xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	      version="3.0">
+	<display-name>Archetype Created Web Application</display-name>
+
+	<!--context-param: Permite acceder a un Servlet a la información de su Contexto 
+		o dicho de otra manera a la información asociada con la propia Aplicación 
+		y que es común a todos los Servlets que despleguemos dentro de esa aplicación. 
+		*?serverTimezone=UTC: Permite establecer una zona horaria y evitar errores 
+		de servidor. -->
+	<context-param>
+		<param-name>jdbcURL</param-name>
+		<param-value>jdbc:mysql://localhost:3306/test_jee?serverTimezone=UTC</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>jdbcUserName</param-name>
+		<param-value>root</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>jdbcPassword</param-name>
+		<param-value></param-value>
+	</context-param>
+<!-- 
+	<servlet>
+		<servlet-name>Controller</servlet-name>
+		<display-name>Controller</display-name>
+		<description></description>
+		<servlet-class>com.HelloWorld1960.test.Controller</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Controller</servlet-name>
+		<url-pattern>/Controller</url-pattern>
+	</servlet-mapping>
+-->
+</web-app>
