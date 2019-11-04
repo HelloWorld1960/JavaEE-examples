@@ -10,6 +10,7 @@
   
   <properties>
   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- Cambiar version de java. -->
   	<maven.compiler.source>1.8</maven.compiler.source>
   	<maven.compiler.target>1.8</maven.compiler.target>
   </properties>
@@ -27,6 +28,7 @@
     	<version>3.0-alpha-1</version>
     </dependency>
   </dependencies>
+  
   <build>
     <finalName>JavaEE-02MavenProject</finalName>
   </build>
