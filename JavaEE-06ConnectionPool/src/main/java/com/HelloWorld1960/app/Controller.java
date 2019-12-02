@@ -51,7 +51,7 @@ public class Controller extends HttpServlet {
 		switch (op) {
 		case "1": //Insertar un registro
 			//Instancia de un nuevo articulo.
-			Articulo articulo = new Articulo(0, "Laptop", "Laptop Motorola", 960);
+			Articulo articulo = new Articulo(0, "Cable HDMI", "Cable para PC", 160);
 			try {
 				if (test.registrar(articulo)) {
 					System.out.println("Articulo ingresado");

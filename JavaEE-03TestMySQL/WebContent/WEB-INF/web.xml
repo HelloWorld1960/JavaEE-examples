@@ -25,7 +25,7 @@
   *?serverTimezone=UTC: Permite establecer una zona horaria y evitar errores de servidor.-->
   <context-param>
   	<param-name>jdbcURL</param-name>
-  	<param-value>jdbc:mysql://localhost:3306/test_jee?serverTimezone=UTC</param-value>
+  	<param-value>jdbc:mysql://localhost:3306/jee_test?serverTimezone=UTC</param-value>
   </context-param>
   
   <context-param>

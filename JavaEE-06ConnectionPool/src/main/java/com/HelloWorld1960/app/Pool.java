@@ -17,7 +17,7 @@ public class Pool {
 			ds.setDriverClassName("com.mysql.cj.jdbc.Driver"); //Driver de nuestra conexión a la base de datos.
 			ds.setUsername("root"); //Nombre de usuario de conexion a la BD.
 			ds.setPassword(""); //Contraseña a la BD.
-			ds.setUrl("jdbc:mysql://localhost:3306/test_jee?serverTimezone=UTC"); //
+			ds.setUrl("jdbc:mysql://localhost:3306/jee_crud01?serverTimezone=UTC"); //
 			
 			// Definimos el tamano del pool de conexiones.
 			ds.setInitialSize(50); // Conexiones iniciales al arrancar la aplicacion.
