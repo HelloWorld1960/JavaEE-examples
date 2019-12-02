@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+	<title>Editar Clientes</title>
+	<h:outputStylesheet library="css" name="styleEditar.css"  />
+</h:head>
+<h:body>
+<!--Esto es un JSF(JavaServer Faces).
+ *-JSF(JavaServer Faces) es un framework MVC(Modelo-Vista-Controlador) basado en el API de Servlets que proporciona un 
+   conjunto de componentes en forma de etiquetas definidas en páginas XHTML con el fin de simplificar el desarrollo de 
+   interfaces de usuario.
+ *-JSF(JavaServer Faces) utiliza las páginas Facelets como vista, objetos Javabean como modelos y métodos de esos 
+   objetos como controladores.
+ *-El servlet FacesServlet realiza toda la tediosa tarea de procesar las peticiones HTTP, obtener los datos de entrada, 
+   validarlos y convertirlos, colocarlos en los objetos del modelo, invocar las acciones del controlador y renderizar la 
+   respuesta utilizando el árbol de componentes.
+ *-Para hacer uso de los componentes JSF declaramos namespace al inicio de este archivo(xmlns:h, xmlns:f).
+ *-Todos los componentes de tipo JSF comienzan con el prefijo <h o <f.
+  -<h:tags o etiquetas HTML.
+  -<f:etiquetas “core” usadas para manejo de eventos, atributos, validación, conversión de datos, administración de 
+  	  componentes entre otros.
+
+ *-Atributos de las etiquetas:
+  -value: Cadena de texto que se mostrara. 
+  -var: Crea una variable que va almacenar cada objeto que viene en la lista que retorna en el metodo que se llamo en
+		la propiedad value.-->
+
+<!--La clave cliente proviene del Managed-Bean, de el metodo editar. -->
+	<h:form styleClass="formulario">
+		<h:panelGrid columns="2" cellpadding="10" cellspacing="10" styleClass="tabla">
+			<f:facet name="header">
+				<h:outputText value="Editar Cliente" styleClass="simpleTitle"></h:outputText>
+			</f:facet>
+
+			<h:outputText value="Nombre" styleClass="simpleLabel"></h:outputText>
+			<h:inputText value="#{cliente.nombre}" styleClass="simpleInput"></h:inputText>
+
+			<h:outputText value="Apellidos" styleClass="simpleLabel"></h:outputText>
+			<h:inputText value="#{cliente.apellido}" styleClass="simpleInput"></h:inputText>
+
+			<h:outputText value="Direccion" styleClass="simpleLabel"></h:outputText>
+			<h:inputText value="#{cliente.direccion}" styleClass="simpleInput"></h:inputText>
+
+			<h:outputText value="Telefono" styleClass="simpleLabel"></h:outputText>
+			<h:inputText value="#{cliente.telefono}" styleClass="simpleInput"></h:inputText>
+			
+			<h:outputText value="Email" styleClass="simpleLabel"></h:outputText>
+			<h:inputText value="#{cliente.email}" styleClass="simpleInput"></h:inputText>
+
+			<f:facet name="footer">
+				<h:panelGroup style = "display:block; text-align:center">
+					<h:commandButton action="#{clienteBean.actualizar(cliente)}" value="Actualizar" styleClass="btnActualizar"></h:commandButton>
+					<h:button value="Cancelar" outcome="index" styleClass="btnCancelar"></h:button>
+      			</h:panelGroup>
+			</f:facet>
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>
