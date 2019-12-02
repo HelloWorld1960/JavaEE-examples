@@ -1,0 +1,71 @@
+@charset "ISO-8859-1";
+
+@import
+	url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+	background-color: #ffffff;
+	width: 80%;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+}
+
+.titulo {
+	text-align: center;
+}
+
+.tabla{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #2A2D2A;
+  color: white;
+}
+
+.btnNuevo {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+  cursor: pointer;
+}
+
+.btnEditar {
+	background-color: #008CBA; /* Blue */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+  cursor: pointer;
+}
+
+.btnEliminar {
+	background-color: #f44336; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+  cursor: pointer;
+}

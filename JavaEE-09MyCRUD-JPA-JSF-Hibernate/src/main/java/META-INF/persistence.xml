@@ -1,0 +1,28 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1">
+<!-- JPA (Java Persistence API): 
+	-Se encarga de automatizar la persistencia de los objetos en la base de datos.
+	-En este fichero se indican los parámetros de conexión a la base de datos y las clases java que son persistentes, 
+	 es decir, las clases java a las que hemos puesto anotaciones propias de JPA. -->
+	
+	<!-- Unidad de persistencia -->
+	<persistence-unit name="MyPERSISTENCE"> <!-- Nombre de la unidad de persistencia(Se puede elegir otro nombre) -->
+		<description>JAVAEE-09MyCRUD-JPA-JSF-Hibernate</description>
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+		<!-- Propiedades de conexion a la BD. -->
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url"	value="jdbc:mysql://localhost:3306/jee_crud_jpa_jsf_hibernate?serverTimezone=UTC" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+		</properties>
+		
+	</persistence-unit>
+
+</persistence>
